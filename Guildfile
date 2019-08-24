@@ -1,0 +1,21 @@
+project = "blog_freelance"
+
+[[task]]
+  Name = "setup"
+  Command = "echo Setup complete"
+  Depends = ["setup-prerequisites", "setup-theme"]
+
+[[task]]
+  Name = "setup-prerequisites"
+  Internal = true
+  Command = "npm install -g postcss-cli autoprefixer"
+  Description = "Install prerequisites"
+
+[[task]]
+  Name = "setup-theme"
+  Internal = true
+  Command = """
+  #!/usr/bin/env bash
+  cd themes/flow
+  npm install
+  """
