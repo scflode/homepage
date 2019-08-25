@@ -1,21 +1,26 @@
 project = "blog_freelance"
 
 [[task]]
+  Name = "up"
+  Description = "Run site locally"
+  Command = "hugo server --disableFastRender"
+
+[[task]]
   Name = "setup"
   Command = "echo Setup complete"
+  Description = "Run setup"
   Depends = ["setup-prerequisites", "setup-theme"]
 
 [[task]]
   Name = "setup-prerequisites"
   Internal = true
   Command = "npm install -g postcss-cli autoprefixer"
-  Description = "Install prerequisites"
 
 [[task]]
   Name = "setup-theme"
   Internal = true
   Command = """
   #!/usr/bin/env bash
-  cd themes/flow
+  cd themes/flow-shizzle
   npm install
   """

@@ -1,3 +1,11 @@
-baseURL = "http://example.org/"
+baseURL = "https://www.florian-schuessel.de/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Software consulting & development"
+
+theme = "flow-shizzle"
+
+enableGitInfo = true
+
+[params]
+  subTitle = "Florian Schüssel"
+  avatar = "/images/me/avatar.png"
