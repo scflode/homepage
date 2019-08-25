@@ -1,11 +1,43 @@
 <meta charset="utf-8"/>
-<title></title>
+<title>{{ .Title }}</title>
 
+{{ $sass := resources.Get "scss/font.scss" }}
+{{ $style := $sass | resources.ToCSS (dict "targetPath" "css/font.css" "outputStyle" "compressed") | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+<!-- The main stylesheet -->
 {{ if .Site.IsServer }}
-    {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
+  {{ $light := resources.Get "css/light.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
+  {{ $dark := resources.Get "css/dark.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
+<script>
+  if (window.matchMedia('(prefers-color-scheme)').media === 'not all') {
+    document.documentElement.style.display = 'none';
+    document.head.insertAdjacentHTML(
+        'beforeend',
+      '<link rel="stylesheet" href="{{ $light.Permalink }}" onload="document.documentElement.style.display = ``">'
+    );
+  }
+</script>
+<link rel="stylesheet" href="{{ $dark.Permalink }}" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="{{ $light.Permalink }}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+    {{ $style := resources.Get "css/base.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 {{ else }}
-    {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
+  {{ $light := resources.Get "css/light.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
+  {{ $dark := resources.Get "css/dark.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
+<script>
+  if (window.matchMedia('(prefers-color-scheme)').media === 'not all') {
+    document.documentElement.style.display = 'none';
+    document.head.insertAdjacentHTML(
+        'beforeend',
+      '<link rel="stylesheet" href="{{ $light.Permalink }}" integrity="$light.Data.Integrity" onload="document.documentElement.style.display = ``">'
+    );
+  }
+</script>
+<link rel="stylesheet" href="{{ $dark.Permalink }}" integrity="$dark.Data.Integrity" media="(prefers-color-scheme: dark)">
+
+<link rel="stylesheet" href="{{ $light.Permalink }}" integrity="$light.Data.Integrity" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+  {{ $style := resources.Get "css/base.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
 

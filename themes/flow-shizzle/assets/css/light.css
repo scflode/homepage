@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+
+/* This file only includes colors for the light mode */
+html {
+  @apply .bg-gray-100;
+}
+
+.footer-colors {
+  @apply border-gray-200;
+  @apply text-gray-300;
+}
+
+.social-icon-colors {
+  @apply text-gray-700;
+}
+
+.navigation-colors {
+  @apply text-gray-800;
+}
+
+#nav-menu li {
+  @apply bg-gray-100;
+}
+
+#nav-menu li:hover, #nav-menu .active {
+  @apply text-gray-300;
+  @apply bg-gray-800;
+}
+
+#logo {
+  background-image: url("/images/logo_black.png");
+}
+
+@tailwind utilities;

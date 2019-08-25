@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+
+html {
+  @apply bg-gray-900;
+}
+
+.footer-colors {
+  @apply border-gray-700;
+  @apply text-gray-300;
+}
+
+.social-icon-colors {
+  @apply text-gray-100;
+}
+
+.navigation-colors {
+  @apply text-gray-200;
+}
+
+#nav-menu li {
+  @apply bg-gray-900;
+}
+
+#nav-menu li:hover, #nav-menu .active {
+  @apply text-gray-700;
+  @apply bg-gray-200;
+}
+
+article {
+  @apply text-gray-200;
+}
+
+.title-colors {
+  @apply text-gray-300;
+}
+
+.caption-colors {
+  @apply text-gray-300;
+}
+
+#logo {
+  background-image: url("/images/logo_white.png");
+}
+
+@tailwind utilities;

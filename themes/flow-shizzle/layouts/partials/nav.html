@@ -1,0 +1,27 @@
+  <ul id="nav-menu" class="w-full flex-grow sm:flex items-center sm:w-auto hidden sm:block justify-end list-reset mt-2 sm:mt-0">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+    <li class="px-4{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">
+      <a href="#">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+      </a>
+    </li>
+    <ul class="sub-menu">
+      {{ range .Children }}
+      <li class="px-2{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ else }}
+    <li class="px-2{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+      <a href="{{ .URL }}">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+      </a>
+    </li>
+    {{ end }}
+    {{ end }}
+  </ul>

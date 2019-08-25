@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+
+#logo {
+  background-position: center;
+  background-size: cover;
+}
+
+#nav-menu li {
+  transition:all 0.3s ease;
+}
+
+article p {
+  @apply py-2;
+}
+
+article ul>li {
+  @apply list-disc;
+  @apply list-inside;
+}
+
+@tailwind utilities;

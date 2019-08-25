@@ -1,12 +1,10 @@
 ---
 title: "About me"
 date: 2019-08-05T00:09:00+02:00
-draft: true
+menu: ["main", "footer"]
 ---
 
 ![Computer](/images/about_computer.png)
-
-My name is Flo Schuessel (Florian Schüssel) :wave:
 
 I am a software consultant and developer for 15+ years. I worked at various places in different roles.
 

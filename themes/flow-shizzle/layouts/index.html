@@ -1,16 +1,16 @@
 {{ define "main" }}
-<article class="text-center text-gray-700">
-  {{ with .Site.Params.avatar}}
-  {{ $avatar := .}}
-  <figure class="relative inset-1/2 w-32 -ml-16 rounded-full border-4 border-gray-300 shadow-lg overflow-hidden">
+<article class="article-colors text-center mt-4 sm:mt-16">
+  {{ with .Site.Params.avatar }}
+  {{ $avatar := . }}
+  <figure class="relative inset-1/2 w-32 -ml-16 rounded-full border-4 shadow-lg overflow-hidden">
     <a href="/"> <img src="{{ $avatar}}"> </a>
   </figure>
   {{ end }}
-  {{ with .Site.Params.subTitle}}
-  {{ $subTitle := .}}
-  <figcaption class="font-serif text-md text-gray-600">{{ $subTitle }}</figcaption>
-  {{ end }}
-  <h1 class="font-serif font-thin text-2xl text-gray-500 mt-2">{{ .Title }}</h1>
+  <figcaption class="caption-colors text-md">{{ .Summary }}</figcaption>
+  <h1 class="title-colors font-serif font-thin text-2xl mt-2">{{ .Title }}</h1>
+  <section id="social" class="social-icon-colors text-2xl pt-2">
+  {{ partial "social.html" . }}
+  </section>
   {{ .Content }}
 </article>
 {{ end }}

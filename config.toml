@@ -1,11 +1,18 @@
 baseURL = "https://www.florian-schuessel.de/"
 languageCode = "en-us"
-title = "Software consulting & development"
+title = "Flo Schüssel - Software consultant & developer"
 
 theme = "flow-shizzle"
 
 enableGitInfo = true
 
 [params]
-  subTitle = "Florian Schüssel"
   avatar = "/images/me/avatar.png"
+
+  [params.social]
+    GitHub = "scflode"
+    Twitter = "scflode"
+    Email   = "mail@florian-schuessel.de"
+    Gitlab = "scflode"
+    Bitbucket = "scflode"
+    Xing = "Florian_Schuessel"
