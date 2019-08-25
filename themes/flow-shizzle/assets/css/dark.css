@@ -5,17 +5,17 @@ html {
   @apply bg-gray-900;
 }
 
-.footer-colors {
+header {
+  @apply text-gray-200;
+}
+
+footer {
   @apply border-gray-700;
   @apply text-gray-300;
 }
 
 .social-icon-colors {
   @apply text-gray-100;
-}
-
-.navigation-colors {
-  @apply text-gray-200;
 }
 
 #nav-menu li {

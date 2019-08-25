@@ -1,22 +1,21 @@
 @tailwind base;
 @tailwind components;
 
-/* This file only includes colors for the light mode */
 html {
   @apply .bg-gray-100;
 }
 
-.footer-colors {
+header {
+  @apply text-gray-800;
+}
+
+footer {
   @apply border-gray-200;
-  @apply text-gray-300;
+  @apply text-gray-500;
 }
 
 .social-icon-colors {
   @apply text-gray-700;
-}
-
-.navigation-colors {
-  @apply text-gray-800;
 }
 
 #nav-menu li {

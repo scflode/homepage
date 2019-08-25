@@ -10,6 +10,10 @@
   transition:all 0.3s ease;
 }
 
+h2 {
+  @apply text-2xl;
+}
+
 article p {
   @apply py-2;
 }

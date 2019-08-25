@@ -1,16 +1,16 @@
 ---
 title: "My projects"
 date: 2019-08-05T00:41:01+02:00
-draft: true
+menu: ["main", "footer"]
 ---
 
-Some of the highlights of projects I worked:
+Some projects / products I worked on:
 
 ## ottonova (2016 - 2018)
 
-ottonova is the first digital health insurance in Germany. I joined the company quite early and was designing the overall structure of the IT system in use by the agents and the customers.
+ottonova is the first fully digital health insurance in Germany. I joined the company quite early and was designing the overall structure of the IT system in use by the agents and the customers.
 
-This contained including third party systems as well as development of highly customized features to help customers getting a great experience and for agents to ease serving the customer.
+This contained integrating third party systems as well as development of highly customized features to help customers getting a great experience and for agents to ease serving the customer's needs.
 
 Besides that the engagement required having a very good and profound knowledge of the German health insurance system as well as deep knowledge of data privacy and data security.
 
