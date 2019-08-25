@@ -6,6 +6,8 @@ theme = "flow-shizzle"
 
 enableGitInfo = true
 
+pygmentsUseClasses = true
+
 [params]
   avatar = "/images/me/avatar.png"
 

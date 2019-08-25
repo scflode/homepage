@@ -3,7 +3,9 @@
 
 {{ $sass := resources.Get "scss/font.scss" }}
 {{ $style := $sass | resources.ToCSS (dict "targetPath" "css/font.css" "outputStyle" "compressed") | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ $syntax := resources.Get "css/syntax.css" }}
+<link rel="stylesheet" href="{{ $syntax.Permalink }}" integrity="$syntax.Data.Integrity">
 
 <!-- The main stylesheet -->
 {{ if .Site.IsServer }}

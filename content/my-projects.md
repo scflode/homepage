@@ -1,7 +1,7 @@
 ---
 title: "My projects"
 date: 2019-08-05T00:41:01+02:00
-menu: ["main", "footer"]
+menu: "main"
 ---
 
 Some projects / products I worked on:

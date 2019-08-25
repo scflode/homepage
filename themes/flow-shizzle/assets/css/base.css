@@ -23,4 +23,19 @@ article ul>li {
   @apply list-inside;
 }
 
+table {
+  @apply table-auto;
+  width: 100%;
+}
+
+table th {
+  @apply text-left;
+}
+
+.chroma {
+  @apply rounded-lg;
+  @apply shadow-2xl;
+  @apply p-2;
+}
+
 @tailwind utilities;
