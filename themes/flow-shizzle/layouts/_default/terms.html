@@ -1,0 +1,45 @@
+{{ define "main" }}
+  {{ $termName := .Data.Plural }}
+  {{ $terms := .Data.Terms.ByCount }}
+  {{ $length := len $terms }}
+  {{ $type := .Type }}
+<section>
+  <h1>{{ .Data.Plural | humanize }}</h1>
+  {{ if and $.Site.Taxonomies.categories (eq $termName "categories") }}
+  <div>
+    {{ range $terms }}
+      {{ $term := .Term }}
+      {{ $pages := .Pages }}
+      {{ with $.Site.GetPage "taxonomy" (printf "%s/%s" $type $term) }}
+    <div>
+      <div>
+        <a href="{{ .Permalink }}">
+          <h2><i class="fas fa-folder"></i> {{ $term | humanize}}</h2>
+        </a>
+        {{ range first 5 $pages }}   
+        <article>
+          <a href="{{ .Permalink }}">{{ .Title }}</a> ({{ .Date.Format "January 2, 2006" }})
+        </article>
+        {{ end }}
+        {{ if gt (len $pages) 5 }}
+        <span>
+          <a href="{{ .Permalink }}">more...</a>
+        </span> 
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+  </div>
+   <!-- Tag cloud Page -->
+  {{ else if and $.Site.Taxonomies.tags (eq $termName "tags") }}
+    {{ range $.Site.Taxonomies.tags.ByCount }}
+      {{ if .Name }}
+    <article>
+      <i class="fas fa-tag"></i> <a href="/tags/{{ .Name | urlize}}/"> {{ .Name }} <small>({{ .Count }})</small></a>
+    </article>
+      {{ end }}
+    {{end}}
+  {{ end }}
+</section>
+{{ end }}

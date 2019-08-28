@@ -22,9 +22,14 @@ footer {
   @apply bg-gray-900;
 }
 
-#nav-menu li:hover, #nav-menu .active {
+#nav-menu li:hover,
+#nav-menu .active {
   @apply text-gray-700;
   @apply bg-gray-200;
+}
+
+section {
+  @apply text-gray-200;
 }
 
 article {
@@ -39,8 +44,16 @@ article {
   @apply text-gray-300;
 }
 
+aside {
+  @apply text-gray-500;
+}
+
 #logo {
   background-image: url("/images/logo_white.png");
+}
+
+.posts {
+  @apply text-gray-300;
 }
 
 @tailwind utilities;

@@ -8,6 +8,9 @@ enableGitInfo = true
 
 pygmentsUseClasses = true
 
+[Permalinks]
+  posts = "/:year/:month/:filename/"
+
 [params]
   avatar = "/images/me/avatar.png"
 

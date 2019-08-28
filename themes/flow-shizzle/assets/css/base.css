@@ -10,8 +10,24 @@
   transition:all 0.3s ease;
 }
 
+section h1, article h1 {
+  @apply text-3xl;
+}
+
+article .sub-title {
+  @apply text-xs;
+}
+
+article .sub-title em {
+  @apply pr-4;
+}
+
 h2 {
   @apply text-2xl;
+}
+
+.taxonomy h2 {
+  @apply text-xl;
 }
 
 article p {
