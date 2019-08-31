@@ -6,8 +6,6 @@ theme = "flow-shizzle"
 
 enableGitInfo = true
 
-pygmentsUseClasses = true
-
 [Permalinks]
   posts = "/:year/:month/:filename/"
 

@@ -7,6 +7,11 @@ categories:
   - Another category
 ---
 
-# The big shit
+# The big skit
 
 Lorem ipsum dolor sit amet.
+
+{{< highlight php "linenos=table" >}}
+<?php
+echo "Hey";
+{{< / highlight >}}

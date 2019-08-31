@@ -51,7 +51,12 @@ table th {
 .chroma {
   @apply rounded-lg;
   @apply shadow-2xl;
-  @apply p-2;
+  @apply px-1;
+}
+
+.chroma .lnt {
+  @apply m-0;
+  @apply p-0;
 }
 
 @tailwind utilities;

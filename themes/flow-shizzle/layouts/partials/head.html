@@ -1,11 +1,10 @@
 <meta charset="utf-8"/>
 <title>{{ .Title }}</title>
 
-{{ $sass := resources.Get "scss/font.scss" }}
-{{ $style := $sass | resources.ToCSS (dict "targetPath" "css/font.css" "outputStyle" "compressed") | fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
-{{ $syntax := resources.Get "css/syntax.css" }}
-<link rel="stylesheet" href="{{ $syntax.Permalink }}" integrity="$syntax.Data.Integrity">
+{{ $font := resources.Get "scss/font.scss" | resources.ToCSS (dict "targetPath" "css/font.css" "outputStyle" "compressed") | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $font.Permalink }}" integrity="{{ $font.Data.Integrity }}">
+{{ $syntax := resources.Get "css/syntax.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $syntax.Permalink }}" integrity="{{ $syntax.Data.Integrity }}">
 
 <!-- The main stylesheet -->
 {{ if .Site.IsServer }}
@@ -22,8 +21,8 @@
 </script>
 <link rel="stylesheet" href="{{ $dark.Permalink }}" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="{{ $light.Permalink }}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
-    {{ $style := resources.Get "css/base.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  {{ $style := resources.Get "css/base.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
 {{ else }}
   {{ $light := resources.Get "css/light.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
   {{ $dark := resources.Get "css/dark.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
@@ -32,14 +31,13 @@
     document.documentElement.style.display = 'none';
     document.head.insertAdjacentHTML(
         'beforeend',
-      '<link rel="stylesheet" href="{{ $light.Permalink }}" integrity="$light.Data.Integrity" onload="document.documentElement.style.display = ``">'
+      '<link rel="stylesheet" href="{{ $light.Permalink }}" integrity="{{ $light.Data.Integrity }}" onload="document.documentElement.style.display = ``">'
     );
   }
 </script>
-<link rel="stylesheet" href="{{ $dark.Permalink }}" integrity="$dark.Data.Integrity" media="(prefers-color-scheme: dark)">
-
-<link rel="stylesheet" href="{{ $light.Permalink }}" integrity="$light.Data.Integrity" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+<link rel="stylesheet" href="{{ $dark.Permalink }}" integrity="{{ $dark.Data.Integrity }}" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="{{ $light.Permalink }}" integrity="{{ $light.Data.Integrity }}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
   {{ $style := resources.Get "css/base.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
 
