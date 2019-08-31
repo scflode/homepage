@@ -1,10 +1,10 @@
 [build]
 base = "/"
 publish = "public"
-command = "./build.sh && hugo --gc --minify"
+command = "./build.sh && hugo --gc --minify -b https://hardcore-mayer-83610b.netlify.com/"
 
 [context.production]
-command = "./build.sh && hugo --gc --minify --enableGitInfo"
+command = "./build.sh && hugo --gc --minify --enableGitInfo -b https://hardcore-mayer-83610b.netlify.com/"
 
 [context.production.environment]
 HUGO_VERSION = "0.57.2"
