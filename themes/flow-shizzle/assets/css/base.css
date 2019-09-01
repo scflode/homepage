@@ -6,6 +6,10 @@
   background-size: cover;
 }
 
+.social-icon a {
+  @apply px-1;
+}
+
 #nav-menu li {
   transition:all 0.3s ease;
 }
