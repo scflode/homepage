@@ -8,6 +8,8 @@ enableGitInfo = true
 
 pygmentsUseClasses = true
 
+summaryLength = 30
+
 [Permalinks]
   posts = "/:year/:month/:filename/"
 

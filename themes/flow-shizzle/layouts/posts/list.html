@@ -9,10 +9,11 @@
   <ul>
     {{ range .Pages }}
     <li class="flex">
-      <span class="pr-4 font-medium">{{ .Date.Format "January 02" }}</span>
-      {{ if .Truncated }} 
-        <a href="{{ .Permalink }}" class="flex-1 underline"> {{ .Title }}</a>  
-        <small class="pl-4"><i class="fas fa-clock"></i> {{ .ReadingTime }} min</small>
+      <span class="pr-4 font-medium">{{ .Date.Format "Jan 02" }}</span>
+      {{ if .Truncated }}
+      <article class="flex-1"><a href="{{ .Permalink }}" class="underline">{{ .Title }}</a>
+        <section>{{ .Summary }} <small><a href="{{ .Permalink }}" class="underline">more...</a></small></section></article>
+      <small class="pl-4"><i class="fas fa-clock"></i> {{ .ReadingTime }} min</small>
       {{ else }}
       <span>{{ .Content }}</span>
       {{ end }}

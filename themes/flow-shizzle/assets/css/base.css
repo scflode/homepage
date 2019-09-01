@@ -10,6 +10,10 @@
   @apply px-1;
 }
 
+i.fab, i.fas, i.fa {
+  @apply pr-1;
+}
+
 #nav-menu li {
   transition:all 0.3s ease;
 }
