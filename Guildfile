@@ -1,6 +1,18 @@
 project = "blog_freelance"
 
 [[task]]
+  Name = "tweet"
+  Description = "Create a new short"
+  Command = """
+  #!/usr/bin/env bash
+
+  hugo new --kind tweet posts/"${1}".md
+  $EDITOR content/"$_"
+  git add "$_"
+  git commit -m "Add tweet ${1}"
+  """
+
+[[task]]
   Name = "up"
   Description = "Run site locally"
   Command = "hugo server --disableFastRender"
