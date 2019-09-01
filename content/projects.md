@@ -1,7 +1,9 @@
 ---
-title: "My projects"
+title: "Projects"
 date: 2019-08-05T00:41:01+02:00
-menu: "main"
+menu:
+  main:
+    weight: 100
 ---
 
 Some projects / products I worked on:
