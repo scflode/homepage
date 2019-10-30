@@ -1,5 +1,5 @@
 ---
-title: "Projects"
+title: "CV"
 date: 2019-08-05T00:41:01+02:00
 menu:
   main:
@@ -34,10 +34,37 @@ There were a lot of different projects I was involved in as developer and team l
 
 The projects ranged from complete online shops to customized payment integrations as well as complete community projects and even an HR tool for a big financial corporation in Germany.
 
+Extract of projects:
+
+* Online CRM for a poster-printing company
+* Human relations tool for a big German financial institution
+* Online shop with retargeting management platform
+
 ## Scandio (2008 - 2011)
 
 Scandio is a software consulting and development company. Here I worked as a software developer on a lot of different projects for companies in a range of different branches. The companies ranged from the (semi-) governmental over the travel sector, the financial sector to the tech sector and so on.
 
+Extract of projects:
+
+* Website for cruise line travels
+* CMS for a big German federation
+* Banner management for a big Munich financial institution
+
 ## Phase 4 Communications (2006 - 2008)
 
-At Phase 4 I started my professional career with creating Flash and PHP based web applications. The customers ranged from the insurance sector to the automobile sector. It can be described as a classical web agency.
+At Phase 4 I started my professional career by creating Flash and PHP based web applications. The customers ranged from the insurance sector to the automobile sector. It can be described as a classical web agency.
+
+Extract of projects:
+
+* Flash based websites for a big German automotive company
+* Flash based online webshop
+* Internal social network for a big German insurance company
+
+## Freelance (2004 - now)
+
+While freelancing I worked on a lot of different projects. 
+
+Some are:
+
+* Booking platform for a German automobile company
+* Flash based community platform for a German beverage manufacturer
