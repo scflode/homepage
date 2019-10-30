@@ -5,6 +5,7 @@ categories:
 - Misc
 tags:
 - a tag
+draft: true
 ---
 
 # Something else

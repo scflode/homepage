@@ -5,6 +5,7 @@ tags:
   - a tag
 categories:
   - Another category
+draft: true
 ---
 
 # The big shit

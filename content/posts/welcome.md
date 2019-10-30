@@ -3,6 +3,7 @@ title: "Welcome"
 date: 2019-08-04T23:51:17+02:00
 categories: 
 - Misc
+draft: true
 ---
 
 After quite some time I decided to start blogging again.
