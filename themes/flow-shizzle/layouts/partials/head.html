@@ -20,9 +20,9 @@
 <meta name="theme-color" content="#ffffff">
 
 {{ $font := resources.Get "scss/font.scss" | resources.ToCSS (dict "targetPath" "css/font.css" "outputStyle" "compressed") | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $font.Permalink }}" integrity="{{ $font.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $font.Permalink }}">
 {{ $syntax := resources.Get "css/syntax.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $syntax.Permalink }}" integrity="{{ $syntax.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $syntax.Permalink }}">
 
 <!-- The main stylesheet -->
   {{ $light := resources.Get "css/light.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
