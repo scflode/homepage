@@ -6,15 +6,40 @@ project = "blog_freelance"
   Command = """
   #!/usr/bin/env bash
 
+  if [ -z "${1}" ]; then
+    echo "Please add a title"
+    exit 1
+  fi
+
+  fname=$(echo "$(date +%F_%T) ${1}" | tr " " "_" | tr "[:upper:]" "[:lower:]")
+
+  hugo new --kind tweet posts/"${1}".md
+  mv "content/posts/${1}.md" "content/posts/${fname}.md"
+
+  $EDITOR "$_"
+  git add "$_"
+  git commit -m "Add tweet ${1}"
+  """
+
+[[task]]
+  Name = "post"
+  Description = "Create a new post"
+  Command = """
+  #!/usr/bin/env bash
+
   if ["${1}" == ""]; then
     echo "Please add a title"
     exit 1
   fi
 
+  fname=$(echo "$(date +%F_%T) ${1}" | tr " " "_" | tr "[:upper:]" "[:lower:]")
+
   hugo new --kind tweet posts/"${1}".md
-  $EDITOR content/"$_"
+  mv "content/posts/${1}.md" "content/posts/${fname}.md"
+
+  $EDITOR "$_"
   git add "$_"
-  git commit -m "Add tweet ${1}"
+  git commit -m "Add post ${1}"
   """
 
 [[task]]
