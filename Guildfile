@@ -6,6 +6,11 @@ project = "blog_freelance"
   Command = """
   #!/usr/bin/env bash
 
+  if ["${1}" == ""]; then
+    echo "Please add a title"
+    exit 1
+  fi
+
   hugo new --kind tweet posts/"${1}".md
   $EDITOR content/"$_"
   git add "$_"
