@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: production
-publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 collections:
@@ -11,7 +10,7 @@ collections:
     create: true
     slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "hidden", default: "Tweet"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Categories", name: "categories", widget: "list", allow_add: false, default: ["shorts"]}
       - {label: "Body", name: "body", widget: "string"}
@@ -23,6 +22,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Draft", name: "draft", widget: "boolean", required: false, default: true}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Categories", name: "categories", widget: "list", default: ["longs"]}
       - {label: "Body", name: "body", widget: "markdown"}
