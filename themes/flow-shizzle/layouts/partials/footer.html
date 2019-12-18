@@ -1,4 +1,13 @@
 <footer class="w-full text-right border-t p-2 pin-b text-xs footer-colors">
+  <ul class="inline mr-2">
+  {{ range .Site.Menus.footer }}
+    <li class="inline">
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    </li>
+  {{ end }}
+  </ul>
+  <span>
   &copy; 2019 Flo Schuessel 
+  </span>
 </footer>
 

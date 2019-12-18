@@ -8,6 +8,15 @@ menu:
 
 Some projects / products I worked on:
 
+## Freelance (2004 - now)
+
+While freelancing I worked on a lot of different projects. 
+
+Some are:
+
+* Booking platform for a German automobile company
+* Flash based community platform for a German beverage manufacturer
+
 ## ottonova (2016 - 2018)
 
 ottonova is the first fully digital health insurance in Germany. I joined the company quite early and was designing the overall structure of the IT system in use by the agents and the customers.
@@ -60,11 +69,3 @@ Extract of projects:
 * Flash based online webshop
 * Internal social network for a big German insurance company
 
-## Freelance (2004 - now)
-
-While freelancing I worked on a lot of different projects. 
-
-Some are:
-
-* Booking platform for a German automobile company
-* Flash based community platform for a German beverage manufacturer
