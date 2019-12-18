@@ -11,7 +11,7 @@ project = "blog_freelance"
     exit 1
   fi
 
-  fname=$(echo "$(date +%F_%T) ${1}" | tr " " "_" | tr "[:upper:]" "[:lower:]")
+  fname=$(echo "$(date +%F%T) ${1}" | tr -d "-" | tr -d ":" | tr " " "_" | tr "[:upper:]" "[:lower:]")
 
   hugo new --kind tweet posts/"${1}".md
   mv "content/posts/${1}.md" "content/posts/${fname}.md"
@@ -32,9 +32,9 @@ project = "blog_freelance"
     exit 1
   fi
 
-  fname=$(echo "$(date +%F_%T) ${1}" | tr " " "_" | tr "[:upper:]" "[:lower:]")
+  fname=$(echo "$(date +%F%T) ${1}" | tr -d "-" | tr -d ":" | tr " " "_" | tr "[:upper:]" "[:lower:]")
 
-  hugo new --kind tweet posts/"${1}".md
+  hugo new posts/"${1}".md
   mv "content/posts/${1}.md" "content/posts/${fname}.md"
 
   $EDITOR "$_"
