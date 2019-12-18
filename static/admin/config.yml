@@ -5,14 +5,24 @@ publish_mode: editorial_workflow
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
-  - name: "timeline" # Used in routes, e.g., /admin/collections/blog
-    label: "Timeline" # Used in the UI
-    folder: "content/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: "tweet"
+    label: "Tweet"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Categories", name: "categories", widget: "list", allow_add: false, default: ["shorts"]}
+      - {label: "Body", name: "body", widget: "string"}
+  - name: "post"
+    label: "Post"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}-{{slug}}"
+    fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: "Categories", name: "categories", widget: "list", default: ["longs", "shorts"]}
+      - {label: "Categories", name: "categories", widget: "list", default: ["longs"]}
       - {label: "Body", name: "body", widget: "markdown"}
