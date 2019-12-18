@@ -40,3 +40,15 @@
 <link rel="stylesheet" href="{{ $light.Permalink }}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
   {{ $style := resources.Get "css/base.css" | postCSS (dict "config" "./assets/css/dev/postcss.config.js") }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
