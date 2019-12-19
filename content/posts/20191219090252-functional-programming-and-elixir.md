@@ -19,16 +19,17 @@ The next part that is very appealing is composing of functions. This is partiall
 
 A short example of functional composition in Elixir with the pipe operator:
 
-```scala
+
+{{< highlight scala "linenos=table" >}}
 data
 |> apply_one_transformation()
 |> apply_another_transformation()
-```
+{{< / highlight >}}
 
 This could also be written like this:
 
-```scala
+{{< highlight scala "linenos=table" >}}
 apply_another_transformation(apply_one_transformation(data))
-```
+{{< / highlight >}}
 
 As you can see that second representation is much harder to understand as you need to read inside out.
