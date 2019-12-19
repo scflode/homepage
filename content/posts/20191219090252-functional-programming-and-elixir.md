@@ -1,5 +1,5 @@
 ---
-title: Functional programming and Elixir
+title: '[WIP] Functional programming and Elixir'
 date: 2019-12-19T08:34:59.239Z
 draft: true
 tags:
