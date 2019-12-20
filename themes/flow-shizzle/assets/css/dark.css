@@ -28,6 +28,10 @@ footer {
   @apply bg-gray-200;
 }
 
+nav {
+  @apply text-gray-200;
+}
+
 section {
   @apply text-gray-200;
 }
