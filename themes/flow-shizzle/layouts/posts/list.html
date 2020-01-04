@@ -4,7 +4,7 @@
 </article>
 <nav class="posts">
   {{ if .Pages }}
-  {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+  {{ range ( .Pages.GroupByDate "2006") }}
   <h2>{{ .Key }}</h2>
 
   <ul>
