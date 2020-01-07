@@ -16,7 +16,7 @@
         <a href="{{ .Permalink }}">
           <h2><i class="fas fa-folder"></i> {{ $term | humanize}}</h2>
         </a>
-        {{ range first 5 $pages }}   
+        {{ range first 5 $pages }}
         <article>
           <a href="{{ .Permalink }}">{{ .Title }}</a> ({{ .Date.Format "January 2, 2006" }})
         </article>

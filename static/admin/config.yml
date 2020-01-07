@@ -13,6 +13,7 @@ collections:
       - {label: "Title", name: "title", widget: "hidden", default: "Tweet"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Categories", name: "categories", widget: "list", allow_add: false, default: ["shorts"]}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Body", name: "body", widget: "string"}
   - name: "post"
     label: "Post"

@@ -22,6 +22,19 @@
         <span class="pr-4 text-xs" style="font-variant-numeric: tabular-nums">{{ .Date.Format "15:04" }}</span>
       </span>
       <span>{{ .Content }}</span>
+      <span>
+        {{ with .Params.tags -}}
+        <i class="px-2 text-xs fas fa-tags"></i>
+        <span>
+          {{ range . }}
+            {{- $name := . -}}
+            {{- with $.Site.GetPage "taxonomy" (printf "tags/%s" $name) | default ($.Site.GetPage "taxonomy" (printf "tags/%s" ($name | urlize))) -}}
+            <a class="text-sm" href="{{ .Permalink }}">{{ $name }}</a>&nbsp;
+            {{ end -}}
+          {{ end }}
+        </span>
+        {{- end }}
+        </span>
       {{ end }}
     </li>
     {{ end }}
@@ -38,4 +51,3 @@
   </ul>
 </nav>
 {{ end }}
-
