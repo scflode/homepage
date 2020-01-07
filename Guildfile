@@ -66,3 +66,12 @@ project = "blog_freelance"
   cd themes/flow-shizzle
   npm install
   """
+
+[[task]]
+  Name = "update"
+  Description = "Update dependencies"
+  Command = """
+  #!/usr/bin/env bash
+  cd themes/flow-shizzle
+  npm update
+  """
