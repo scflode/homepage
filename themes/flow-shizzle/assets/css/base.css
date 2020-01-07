@@ -30,6 +30,10 @@ article .sub-title em {
   @apply pr-4;
 }
 
+.posts ul li a {
+  @apply underline;
+}
+
 h2 {
   @apply text-2xl;
 }
