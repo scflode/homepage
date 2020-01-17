@@ -1,7 +1,7 @@
 ---
 title: 'WIP Web Components, a first take'
 date: 2020-01-17T17:13:29.139Z
-draft: false
+draft: true
 tags:
   - html
   - javascript
