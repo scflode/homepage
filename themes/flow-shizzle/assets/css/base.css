@@ -30,16 +30,18 @@ article .sub-title em {
   @apply pr-4;
 }
 
-.posts ul li a {
+.posts ul li a, .post a {
   @apply underline;
 }
 
 h2 {
   @apply text-2xl;
+  @apply mt-4;
 }
 
 h3 {
   @apply text-xl;
+  @apply mt-4;
 }
 
 .taxonomy h2 {
@@ -66,8 +68,10 @@ table th {
 
 .chroma {
   @apply rounded-lg;
-  @apply shadow-2xl;
-  @apply px-1;
+  @apply shadow-lg;
+  @apply px-4;
+  @apply py-4;
+  @apply text-sm;
 }
 
 .chroma .lnt {

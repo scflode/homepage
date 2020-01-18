@@ -16,7 +16,7 @@ categories:
 
 Generally speaking you are able to create something like
 
-{{< highlight html "linenos=table" >}}
+{{< highlight html "linenos=false" >}}
 <my-element attr1="some">
   Nested content
   <my-nested-element/>
@@ -26,7 +26,7 @@ Generally speaking you are able to create something like
 
 Browsers provide the developer with a bunch of APIs to accomplish this. These APIs though are pretty low-level and in some regards a bit more complicated than desired. F.e. a vanilla Web Component could look like this:
 
-{{< highlight javascript "linenos=table" >}}
+{{< highlight javascript "linenos=false" >}}
 class MyElement extends HTMLElement {
   constructor() {
     super();
@@ -42,7 +42,7 @@ customElements.define('my-element', MyElement);
 
 Within an HTML page you can then access it like this:
 
-{{< highlight html "linenos=table" >}}
+{{< highlight html "linenos=false" >}}
 <html>
 
 <head>
