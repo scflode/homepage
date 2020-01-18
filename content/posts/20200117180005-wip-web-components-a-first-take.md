@@ -1,7 +1,7 @@
 ---
 title: 'WIP Web Components, a first take'
 date: 2020-01-17T17:13:29.139Z
-draft: true
+draft: false
 tags:
   - html
   - javascript
@@ -14,17 +14,17 @@ categories:
 
 Generally speaking you are able to create something like
 
-```html
+{{< highlight html "linenos=table" >}}
 <my-element attr1="some">
   Nested content
   <my-nested-element/>
   <p>Other normal HTML</p>
 </my-element>
-```
+{{< / highlight >}}
 
 Browsers provide the developer with a bunch of APIs to accomplish this. These APIs though are pretty low-level and in some regards a bit more complicated than desired. F.e. a vanilla Web Component could look like this:
 
-```javascript
+{{< highlight javascript "linenos=table" >}}
 class MyElement extends HTMLElement {
   constructor() {
     super();
@@ -36,11 +36,11 @@ class MyElement extends HTMLElement {
   }
 }
 customElements.define('my-element', MyElement);
-```
+{{< / highlight >}}
 
 Within an HTML page you can then access it like this:
 
-```html
+{{< highlight html "linenos=table" >}}
 <html>
 
 <head>
@@ -71,7 +71,7 @@ Within an HTML page you can then access it like this:
 </body>
 
 </html>
-```
+{{< / highlight >}}
 
 This should then print out something like the following:
 
