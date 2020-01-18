@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <style>
+    .wrapper {
+      background-color: green;
+      min-width: 10px;
+      min-height: 10px;
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body>
+  <p>Normal HTML</p>
+  <hr>
+  <my-element text="A component property's text"></my-element>
+  <hr>
+  <my-element>
+    <p>Some content inside the component without component property</p>
+  </my-element>
+  <hr>
+  <my-element text="Web Component text">
+    <p>Nested HTML content's text</p>
+  </my-element>
+  <script src="./index.js"></script>
+</body>
+
+</html>
