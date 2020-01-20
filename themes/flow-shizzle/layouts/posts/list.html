@@ -11,30 +11,32 @@
     {{ range .Pages }}
     <li class="flex">
       {{ if .Truncated }}
-      <span class="pr-16 font-medium" style="font-variant-numeric: tabular-nums">{{ .Date.Format "Jan 02" }}</span>
-      <article class="flex-1"><a href="{{ .Permalink }}" class="underline">{{ .Title }}</a>
+      <span class="px-2 font-medium" style="font-variant-numeric: tabular-nums">{{ .Date.Format "Jan 02" }}</span>
+      <article class="pl-2 flex-1"><a href="{{ .Permalink }}" class="underline">{{ .Title }}</a>
         <section>{{ .Summary }} <small><a href="{{ .Permalink }}" class="underline">more...</a></small></section>
       </article>
       <small class="pl-4"><i class="fas fa-clock"></i> {{ .ReadingTime }} min</small>
       {{ else }}
-      <span class="pr-2 font-medium" style="font-variant-numeric: tabular-nums">
+      <span class="px-2 font-medium" style="font-variant-numeric: tabular-nums">
         {{ .Date.Format "Jan 02" }}
-        <span class="pr-4 text-xs" style="font-variant-numeric: tabular-nums">{{ .Date.Format "15:04" }}</span>
+        <span class="block pr-4 text-xs" style="font-variant-numeric: tabular-nums">{{ .Date.Format "15:04" }}</span>
       </span>
-      <span>{{ .Content }}</span>
-      <span>
-        {{ with .Params.tags -}}
-        <i class="px-2 text-xs fas fa-tags"></i>
-        <span>
-          {{ range . }}
+      <span class="pl-2">
+        {{ .Content }}
+        <aside>
+          {{ with .Params.tags -}}
+          <i class="pr-2 text-xs fas fa-tags"></i>
+          <span>
+            {{ range . }}
             {{- $name := . -}}
             {{- with $.Site.GetPage "taxonomy" (printf "tags/%s" $name) | default ($.Site.GetPage "taxonomy" (printf "tags/%s" ($name | urlize))) -}}
             <a class="text-sm" href="{{ .Permalink }}">{{ $name }}</a>&nbsp;
             {{ end -}}
-          {{ end }}
-        </span>
-        {{- end }}
-        </span>
+            {{ end }}
+          </span>
+          {{- end }}
+        </aside>
+      </span>
       {{ end }}
     </li>
     {{ end }}
