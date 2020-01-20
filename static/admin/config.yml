@@ -9,7 +9,7 @@ collections:
     folder: "content/posts/tweets"
     create: true
     slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}-{{slug}}"
-    identifier_field: date
+    identifier_field: body
     fields:
       - {label: "Title", name: "title", widget: "hidden", default: "Tweet"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
