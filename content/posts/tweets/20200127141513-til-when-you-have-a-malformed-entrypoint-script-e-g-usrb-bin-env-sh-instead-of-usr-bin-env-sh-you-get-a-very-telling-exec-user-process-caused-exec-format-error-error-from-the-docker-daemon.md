@@ -8,4 +8,4 @@ tags:
   - command
   - entrypoint
 ---
-TIL when you have a malformed entrypoint script e.g. `#/usrb/bin/env sh` instead of `#!/usr/bin/env sh` you get a very telling `exec user process caused "exec format error"` error from the Docker daemon.
+TIL when you have a malformed entrypoint script e.g. `#/usr/bin/env sh` instead of `#!/usr/bin/env sh` you get a very telling `exec user process caused "exec format error"` error from the Docker daemon.
