@@ -7,4 +7,4 @@ tags:
   - shell
   - remember
 ---
-String comparision is done with a single equals sign: `if [ "$var" = "" ]`
+String comparision in shell scripts is done with a single equals sign: `if [ "$var" = "" ]`
