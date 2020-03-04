@@ -49,7 +49,7 @@ When you want to use the `conn` within the template you need to pass the `assign
   end
 {{< / highlight >}}
 
-> The `assigns` also contain the `conn` which then as usual is accessible via `@conn`.
+> The `assigns` also contain the `conn` which then is accessible as usual via `@conn`.
 
 You're done. Whenever a `500` error occurs this template is being rendered.
 
