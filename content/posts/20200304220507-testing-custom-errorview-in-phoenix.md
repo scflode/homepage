@@ -33,13 +33,23 @@ To get a custom template in there you need to add a function for it:
 
 {{< highlight scala "linenos=table" >}}
   def render("500.html", _assigns) do
-    render("500_page.html", _assigns)
+    render("500_page.html")
   end
 {{< / highlight >}}
 
 This f.e. will render this template for all `500` errors. Next we need to create this template under `my_app_web/templates/error/500_page.html.eex`and fill in the complete HTML code (including the `app.html.eex` part as this template is standalone).
 
 > Do not name the template `500.html.eex` as this will end in an infinite loop.
+
+When you want to use the `conn` within the template you need to pass the `assigns` though:
+
+{{< highlight scala "linenos=table" >}}
+  def render("500.html", assigns) do
+    render("500_page.html", assigns)
+  end
+{{< / highlight >}}
+
+> The `assigns` also contain the `conn` which then as usual is accessible via `@conn`.
 
 You're done. Whenever a `500` error occurs this template is being rendered.
 
@@ -50,7 +60,7 @@ The initial test looks like this:
 
 {{< highlight scala "linenos=table" >}}
   test "renders 500.html" do
-    assert render_to_string(NfinityToolkitWeb.ErrorView, "500.html", [] ==
+    assert render_to_string(MyAppWeb.ErrorView, "500.html", [] ==
              "Internal Server Error"
   end
 {{< / highlight >}}
@@ -61,7 +71,7 @@ A naive approach is to go the controller test way and change it to something lik
 
 {{< highlight scala "linenos=table" >}}
   test "renders 500.html" do
-    assert render_to_string(NfinityToolkitWeb.ErrorView, "500.html", [] =~
+    assert render_to_string(MyAppWeb.ErrorView, "500.html", [] =~
              "Oh noes! Something went south."
   end
 {{< / highlight >}}
@@ -74,7 +84,7 @@ Easy enough as the test case uses `MyApp.ConnCase`. We just need to inject the `
 
 {{< highlight scala "linenos=table" >}}
   test "renders 500.html", %{conn: conn} do
-    assert render_to_string(NfinityToolkitWeb.ErrorView, "500.html", conn: conn =~
+    assert render_to_string(MyAppWeb.ErrorView, "500.html", conn: conn =~
              "Oh noes! Something went south."
   end
 {{< / highlight >}}
