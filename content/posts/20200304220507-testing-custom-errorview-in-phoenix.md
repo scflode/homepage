@@ -125,7 +125,7 @@ defmodule MyAppWeb.ErrorViewTest do
              conn: conn,
              current_user: user
            ) =~
-             "There was an unexpected error."
+             "Oh noes! Something went south."
   end
 end
 {{< / highlight >}}
