@@ -1,4 +1,13 @@
 @tailwind base;
+
+code {
+  @apply inline-block;
+  @apply text-xs;
+  @apply rounded;
+  @apply py-1;
+  @apply px-2;
+}
+
 @tailwind components;
 
 #logo {
@@ -10,15 +19,18 @@
   @apply px-1;
 }
 
-i.fab, i.fas, i.fa {
+i.fab,
+i.fas,
+i.fa {
   @apply pr-1;
 }
 
 #nav-menu li {
-  transition:all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-section h1, article h1 {
+section h1,
+article h1 {
   @apply text-3xl;
 }
 
@@ -30,7 +42,8 @@ article .sub-title em {
   @apply pr-4;
 }
 
-.posts ul li a, .post a {
+.posts ul li a,
+.post a {
   @apply underline;
 }
 
@@ -52,7 +65,7 @@ article p {
   @apply py-2;
 }
 
-article ul>li {
+article ul > li {
   @apply list-disc;
   @apply list-inside;
 }
@@ -66,17 +79,26 @@ table th {
   @apply text-left;
 }
 
+div.chroma {
+  @apply rounded;
+  @apply shadow-inner;
+}
+
 .chroma {
-  @apply rounded-lg;
-  @apply shadow-lg;
-  @apply px-4;
-  @apply py-4;
-  @apply text-sm;
+  @apply px-1;
+  @apply py-0;
+  @apply my-2;
 }
 
 .chroma .lnt {
   @apply m-0;
   @apply p-0;
+}
+
+.chroma code {
+  @apply p-0;
+  @apply m-0;
+  @apply text-sm;
 }
 
 @tailwind utilities;

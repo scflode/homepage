@@ -23,7 +23,8 @@ footer {
   @apply bg-gray-100;
 }
 
-#nav-menu li:hover, #nav-menu .active {
+#nav-menu li:hover,
+#nav-menu .active {
   @apply text-gray-300;
   @apply bg-gray-800;
 }
@@ -34,6 +35,12 @@ nav {
 
 #logo {
   background-image: url("/images/logo_black.png");
+}
+
+code,
+.chroma {
+  @apply bg-gray-900;
+  @apply text-gray-100;
 }
 
 @tailwind utilities;

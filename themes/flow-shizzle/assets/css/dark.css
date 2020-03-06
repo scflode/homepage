@@ -61,4 +61,10 @@ aside {
   @apply text-gray-300;
 }
 
+code,
+.chroma {
+  @apply bg-gray-800;
+  @apply text-gray-200;
+}
+
 @tailwind utilities;
