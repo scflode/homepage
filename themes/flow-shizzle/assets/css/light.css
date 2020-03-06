@@ -38,7 +38,8 @@ nav {
 }
 
 code,
-.chroma {
+.chroma,
+div.highlight > div {
   @apply bg-gray-900;
   @apply text-gray-100;
 }

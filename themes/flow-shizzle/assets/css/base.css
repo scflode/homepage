@@ -79,9 +79,15 @@ table th {
   @apply text-left;
 }
 
-div.chroma {
+div.chroma,
+div.highlight {
+  @apply overflow-hidden;
   @apply rounded;
   @apply shadow-inner;
+}
+
+pre > code {
+  @apply w-full;
 }
 
 .chroma {

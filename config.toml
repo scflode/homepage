@@ -6,9 +6,19 @@ theme = "flow-shizzle"
 
 enableGitInfo = true
 
-pygmentsUseClasses = true
-
 summaryLength = 40
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "swapoff"
+    tabWidth = 4
 
 [Permalinks]
   posts = "/:year/:month/:filename/"
