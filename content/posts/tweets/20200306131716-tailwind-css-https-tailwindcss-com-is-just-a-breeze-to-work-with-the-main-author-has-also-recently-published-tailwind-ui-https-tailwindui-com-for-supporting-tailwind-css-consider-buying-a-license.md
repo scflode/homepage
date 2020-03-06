@@ -8,4 +8,4 @@ tags:
   - css
   - tailwindcss
 ---
-[Tailwind CSS](https://tailwindcss.com) is just a breeze to work with. The main author has also recently published [Tailwind UI](https://tailwindui.com). For supporting Tailwind CSS consider buying a license.
+[Tailwind CSS](https://tailwindcss.com) is just a breeze to work with. The main author Adam Wathan and Steve Schoger (Refactoring UI) have also recently published [Tailwind UI](https://tailwindui.com). For supporting Tailwind CSS consider buying a license.
