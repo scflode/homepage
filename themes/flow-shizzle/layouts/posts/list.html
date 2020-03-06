@@ -9,7 +9,7 @@
 
   <ul>
     {{ range .Pages }}
-    <li class="flex">
+    <li class="my-2 flex">
       {{ if .Truncated }}
       <span class="px-2 inline-block font-medium" style="font-variant-numeric: tabular-nums">{{ .Date.Format "Jan 02" }}</span>
       <article class="pl-2 flex-1"><a href="{{ .Permalink }}" class="underline">{{ .Title }}</a>
