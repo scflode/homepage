@@ -5,7 +5,7 @@ tags = ["css", "dark mode"]
 title = "Dark mode in CSS"
 
 +++
-![](/uploads/2020/03/07/css-is-awesome.png)
+![](/uploads/2020/03/07/css-is-awesome.jpg)
 
 CSS nowadays is more powerful and convenient than ever before. It makes it very easy to let webpages feel native, adapt to complex styles in a quite easy way.
 
