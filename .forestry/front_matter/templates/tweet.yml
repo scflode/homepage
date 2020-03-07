@@ -5,12 +5,19 @@ display_field: title
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  hidden: true
+  default: Tweet
 - type: datetime
   name: date
-  label: date
+  label: Date
+  default: now
 - type: list
   name: categories
-  label: categories
+  label: Categories
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
 pages:
 - content/posts/test-tweet.md
