@@ -1,35 +1,35 @@
 baseURL = "https://www.florian-schuessel.de/"
-languageCode = "en-us"
-title = "Flo Schüssel - Software consultant & developer"
-
-theme = "flow-shizzle"
-
 enableGitInfo = true
-
+languageCode = "en-us"
 summaryLength = 40
-
-[markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = true
-    style = "swapoff"
-    tabWidth = 4
-
+theme = "flow-shizzle"
+title = "Flo Schüssel - Software consultant & developer"
 [Permalinks]
-  posts = "/:year/:month/:filename/"
-
+posts = "/:year/:month/:filename/"
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+hl_Lines = ""
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = true
+style = "swapoff"
+tabWidth = 4
+[[menu.footer]]
+name = "Tags"
+url = "/tags"
+weight = 2
+[[menu.footer]]
+name = "Categories"
+url = "/categories"
+weight = 1
 [params]
-  avatar = "/images/me/avatar.png"
-
-  [params.social]
-    GitHub = "scflode"
-    Twitter = "scflode"
-    Email   = "mail@florian-schuessel.de"
-    Gitlab = "scflode"
-    Bitbucket = "scflode"
-    Xing = "Florian_Schuessel"
+avatar = "/images/me/avatar.png"
+[params.social]
+Bitbucket = "scflode"
+Email = "mail@florian-schuessel.de"
+GitHub = "scflode"
+Gitlab = "scflode"
+Twitter = "scflode"
+Xing = "Florian_Schuessel"

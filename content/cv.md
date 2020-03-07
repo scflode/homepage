@@ -1,11 +1,11 @@
 ---
-title: "CV"
-date: 2019-08-05T00:41:01+02:00
+title: CV
+date: 2019-08-04T22:41:01.000+00:00
 menu:
   main:
-    weight: 100
----
+    weight: 2
 
+---
 Some projects / products I worked on:
 
 ## Freelance (2004 - now)
@@ -68,4 +68,3 @@ Extract of projects:
 * Flash based websites for a big German automotive company
 * Flash based online webshop
 * Internal social network for a big German insurance company
-

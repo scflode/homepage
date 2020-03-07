@@ -1,11 +1,11 @@
 ---
-title: "About"
-date: 2019-08-05T00:09:00+02:00
+title: About
+date: 2019-08-04T22:09:00.000+00:00
 menu:
   main:
-    weight: 110
----
+    weight: 3
 
+---
 ![Computer](/images/about_computer.png)
 
 I am a software consultant and developer for 15+ years. I worked at various places in different roles.
@@ -23,4 +23,3 @@ I am a software consultant and developer for 15+ years. I worked at various plac
 |                                           | <i class="fab fa-bamboo"></i> Bamboo         |             |             |
 |                                           | <i class="fab fa-jira"></i> Jira             |             |             |
 |                                           | <i class="fab fa-confluence"></i> Confluence |             |             |
-

@@ -1,11 +1,11 @@
 ---
-title: "Imprint"
-date: 2019-08-05T00:41:01+02:00
+title: Imprint
+date: 2019-08-04T22:41:01.000+00:00
 menu:
   footer:
-    weight: 100
----
+    weight: 3
 
+---
 ## Information provided according to sec. 5 german telemedia act (tmg)
 
 Florian Schüssel  
@@ -43,4 +43,3 @@ Contents and compilations published on these websites by the providers are subje
 The commercial use of our contents without permission of the originator is prohibited.
 
 Copyright laws of third parties are respected as long as the contents on these websites do not originate from the provider. Contributions of third parties on this site are indicated as such. However, if you notice any violations of copyright law, please inform us. Such contents will be removed immediately.
-
