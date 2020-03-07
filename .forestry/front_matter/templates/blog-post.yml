@@ -18,3 +18,5 @@ fields:
   type: tag_list
   default: []
   label: Categories
+pages:
+- content/posts/dark-mode-in-css.md

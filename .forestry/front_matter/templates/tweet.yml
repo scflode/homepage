@@ -21,4 +21,6 @@ fields:
   default: []
   label: Tags
 pages:
+- content/posts/tweets/tweet-1.md
+- content/posts/tweets/tweet-2.md
 - content/posts/tweets/tweet.md
