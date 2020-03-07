@@ -29,7 +29,8 @@ build:
   - HUGO_ENV=staging
   - HUGO_VERSION=0.63.2
   preview_output_directory: public
-  install_dependencies_command: cd themes/flow-shizzle && npm install
+  install_dependencies_command: cd themes/flow-shizzle && npm install postcss-cli
+    && npm install
   preview_docker_image: forestryio/hugo:node10
   mount_path: "/srv"
   working_dir: "/srv"
