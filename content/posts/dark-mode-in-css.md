@@ -102,7 +102,7 @@ From my PoV this is the most elegant way to handle this if you are writing plain
 
 The last approach I will handle in this post is the separate files approach. The basic idea is outlined above already. One might argue that this is also something you need to do from the start on and I have to admin that I agree.
 
-The `HTML` file:
+`index.html`
 
 ```html
 <html>
@@ -118,13 +118,13 @@ The `HTML` file:
 </html>
 ```
 
-The `css/base.css`:
+`css/base.css`
 
 ```css
 /* Common layout except colors etc. */
 ```
 
-The `css/dark.css`:
+`css/dark.css`
 
 ```css
 html {
@@ -133,7 +133,7 @@ html {
 }
 ```
 
-The `css/light.css`:
+`css/light.css`
 
 ```css
 html {
