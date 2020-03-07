@@ -146,4 +146,4 @@ html {
 
 All the above outlined approaches achieve the same. They are just different forms of organization depending on what you need or what you can use. If you for instance use a CSS framework you might prefer another approach as when you are completely free.
 
-The dark mode support in browsers though is something very underestimated in my opinion. It is easy to achieve and shows that you and/or your company has some second thoughts about users.
+The dark mode support in browsers though is something very underestimated in my opinion. It is failry easy to implement and shows that you and/or your company has thought a bit more about your users and customers.
