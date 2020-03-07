@@ -1,17 +1,18 @@
 ---
 title: Testing custom ErrorView in Phoenix
-date: 2020-03-04T22:01:42.715Z
-draft: false
+date: 2020-03-04T22:01:42.715+00:00
 tags:
-  - elixir
-  - phoenix
-  - exunit
+- elixir
+- phoenix
+- exunit
 categories:
-  - longs
-  - development
-  - programming
-  - testing
+- longs
+- development
+- programming
+- testing
+
 ---
+![](/uploads/2020/03/07/colton-sturgeon-TUSJWsPnnJ8-unsplash.jpg)
 
 ## Create custom error pages
 
@@ -138,3 +139,5 @@ end
 I don't know if this is the most clever approach (likely not 😅) but it works.
 
 Phoenix and Elixir are reasonably easy to understand. The structure is clear and the codebases are clean. I often directly check the source code and although sometimes there is some scratching most of the time it's easy to understand. Great framework, great language. Hat tip to both!
+
+Photo by [Colton Sturgeon](https://unsplash.com/@coltonsturgeon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/alchemy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
