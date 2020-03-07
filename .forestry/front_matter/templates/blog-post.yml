@@ -1,17 +1,20 @@
 ---
 label: Blog post
-hide_body: true
+hide_body: false
 display_field: title
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: datetime
   name: date
-  label: date
-- type: list
-  name: tags
-  label: tags
-- type: list
-  name: categories
-  label: categories
+  label: Date
+  default: now
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: categories
+  type: tag_list
+  default: []
+  label: Categories
