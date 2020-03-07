@@ -15,3 +15,15 @@ More recently operating systems like iOS, Android, macOS, Windows got added a fe
 Wouldn’t it be nice to have your website react to it as well? That might sound like a job for Javascript, doesn’t it? But CSS has you (almost) covered here. There are media selectors that get this information from the underlying OS allowing you to override the “light” theme with an additional dark version.
 
 ## How does this work?
+
+There are different approaches that can be taken. The easiest is to directly have the alternating styles within one file inside the respective query selector which might be OK for smaller CSS amounts. Most likely a site has a bit more to it and this approach does not suffice. 
+
+Another approach to simplify this is to have CSS variables in place. These are then the knobs you’d adjust for different styles. This is likely the most elegant way to solve the problem.
+
+The third approach is to have a `base.css` file with all the settings except the colors, a `light.css` for the light colors and a `dark.css` for the dark ones. This approach requires some basic Javascript thought. This blog uses that approach currently.
+
+Let’s go through all of them with small examples.
+
+### Inline approach
+
+> As written above this might not scale too much.
