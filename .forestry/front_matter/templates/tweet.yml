@@ -19,6 +19,3 @@ fields:
   type: tag_list
   default: []
   label: Tags
-pages:
-- content/posts/test-tweet.md
-- content/posts/tweets/tweet.md

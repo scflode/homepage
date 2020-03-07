@@ -5,10 +5,19 @@ admin_path: a
 webhook_url: 
 sections:
 - type: directory
+  path: content/tweets
+  label: Tweets
+  create: documents
+  match: "**/*"
+  templates:
+  - tweet
+- type: directory
   path: content
   label: Pages
-  create: all
+  create: documents
   match: "*"
+  templates:
+  - blog-post
 - type: directory
   path: content/posts
   label: Posts
