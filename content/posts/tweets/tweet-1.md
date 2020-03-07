@@ -1,7 +1,6 @@
 +++
 categories = []
 date = 2020-03-07T15:28:00Z
-draft = true
 tags = []
 title = "Tweet"
 
