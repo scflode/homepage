@@ -6,7 +6,7 @@ tags = ["css", "dark mode"]
 title = "Dark mode in CSS"
 
 +++
-![](/uploads/2020/03/07/E25396F4-ABA3-4CD2-B543-BB25F38F86F3.jpeg)
+![CSS is aweso...](/uploads/2020/03/07/E25396F4-ABA3-4CD2-B543-BB25F38F86F3.jpeg "CSS is aweso...")
 
 CSS nowadays is more powerful and convenient than ever before. It makes it very easy to let webpages feel native, adapt to complex styles in a quite easy way.
 
@@ -16,7 +16,7 @@ Wouldn’t it be nice to have your website react to it as well? That might sound
 
 ## How does this work?
 
-There are different approaches that can be taken. The easiest is to directly have the alternating styles within one file inside the respective query selector which might be OK for smaller CSS amounts. Most likely a site has a bit more to it and this approach does not suffice. 
+There are different approaches that can be taken. The easiest is to directly have the alternating styles within one file inside the respective query selector which might be OK for smaller CSS amounts. Most likely a site has a bit more to it and this approach does not suffice.
 
 Another approach to simplify this is to have CSS variables in place. These are then the knobs you’d adjust for different styles. This is likely the most elegant way to solve the problem.
 
@@ -27,3 +27,7 @@ Let’s go through all of them with small examples.
 ### Inline approach
 
 > As written above this might not scale too much.
+
+### CSS variables
+
+### Separate light and dark files
