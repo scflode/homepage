@@ -1,52 +1,48 @@
 ---
-upload_path: "/static/uploads/:year:/:month:/:day:"
-frontmatter_file_url_template: "/uploads/:year:/:month:/:day:"
-body_file_url_template: "/uploads/:year:/:month:/:day:"
 new_page_extension: md
 auto_deploy: false
-admin_path: public/a
-webhook_url:
+admin_path: "/public/a"
+webhook_url: 
 sections:
-  - type: directory
-    path: content/posts/tweets
-    label: Tweets
-    create: documents
-    match: "*"
-    templates:
-      - tweet
-  - type: directory
-    path: content/posts
-    label: Posts
-    create: documents
-    match: "*"
-    templates:
-      - blog-post
-  - type: directory
-    path: content
-    label: Pages
-    create: documents
-    match: "*"
-    templates:
-      - page
-  - type: directory
-    path: content/images
-    label: Images
-    create: all
-    match: "**/*"
+- type: directory
+  path: content/posts/tweets
+  label: Tweets
+  create: documents
+  match: "*"
+  templates:
+  - tweet
+- type: directory
+  path: content/posts
+  label: Posts
+  create: documents
+  match: "*"
+  templates:
+  - blog-post
+- type: directory
+  path: content
+  label: Pages
+  create: documents
+  match: "*"
+  templates:
+  - page
+- type: directory
+  path: content/images
+  label: Images
+  create: all
+  match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
-front_matter_path: ""
+front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ":year:/:month:/:day:/:filename:"
 build:
   preview_env:
-    - HUGO_ENV=staging
-    - HUGO_VERSION=0.63.2
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.63.2
   preview_output_directory: public
   preview_docker_image: forestryio/hugo:node10
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command:
-    "./build.sh && hugo server -D -E -F --port 8080 --bind
+  instant_preview_command: "./build.sh && hugo server -D -E -F --port 8080 --bind
     0.0.0.0 --renderToDisk -d public"
 version: 0.63.2
