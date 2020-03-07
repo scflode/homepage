@@ -12,7 +12,7 @@ CSS nowadays is more powerful and convenient than ever before. It makes it very 
 
 More recently operating systems like iOS, Android, macOS, Windows got added a feature called dark mode. The OS can even be told to switch to the alternate mode at specific times so the user does not need to do this manually.
 
-Wouldn’t it be nice to have your website react to it as well? That might sound like a job for Javascript, doesn’t it? But CSS has you (almost) covered here. There are media selectors that get this information from the underlying OS allowing you to override the “light” theme with an additional dark version.
+Wouldn’t it be nice to have your website react to it as well? That might sound like a job for Javascript, doesn’t it? But CSS has you (almost) covered here. There are media selectors that get this information via the browser from the underlying OS allowing you to override the “light” theme with an additional dark version.
 
 ## How does this work?
 
@@ -20,7 +20,7 @@ There are different approaches that can be taken. The easiest is to directly hav
 
 Another approach to simplify this is to have CSS custom properties (variables) in place. These are then the knobs you’d adjust for different styles. This is likely the most elegant way to solve the problem.
 
-The third approach is to have a `base.css` file with all the settings except the colors, a `light.css` for the light colors and a `dark.css` for the dark ones. This approach requires some basic Javascript thought. This blog uses that approach currently.
+The third approach is to have a `base.css` file with all the settings except the colors, a `light.css` for the light colors and a `dark.css` for the dark ones.
 
 Let’s go through all of them with small examples.
 
