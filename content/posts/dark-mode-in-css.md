@@ -1,7 +1,6 @@
 +++
 categories = ["development "]
 date = 2020-03-07T17:01:13Z
-draft = true
 tags = ["css", "dark mode"]
 title = "Dark mode in CSS"
 
@@ -92,7 +91,7 @@ In code that looks like this:
 </html>
 ```
 
-This looks a bit much in this simple example but IMO this scales better than the above approach (but is very similar to it) as you have this sort of design system in place. 
+This looks a bit much in this simple example but IMO this scales better than the above approach (but is very similar to it) as you have this sort of design system in place.
 
 The downside is that you should start right ahead with this as it could become a bit cumbersome once you have a lot of CSS in place. I for instance normally start with writing CSS for the light / default mode and only later come to the conclusion that a dark mode might have some use.
 
