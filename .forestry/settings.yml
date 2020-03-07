@@ -14,15 +14,17 @@ sections:
 - type: directory
   path: content/posts
   label: Posts
-  create: all
-  match: "**/*"
+  create: documents
+  match: "*"
+  templates:
+  - blog-post
 - type: directory
   path: content
   label: Pages
   create: documents
   match: "*"
   templates:
-  - blog-post
+  - page
 - type: directory
   path: content/images
   label: Images
