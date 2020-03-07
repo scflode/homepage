@@ -6,9 +6,11 @@ tags = ["css", "dark mode"]
 title = "Dark mode in CSS"
 
 +++
+![](/uploads/2020/03/07/E25396F4-ABA3-4CD2-B543-BB25F38F86F3.jpeg)
+
 CSS nowadays is more powerful and convenient than ever before. It makes it very easy to let webpages feel native, adapt to complex styles in a quite easy way.
 
-More recently operating systems like iOS, Android, macOS, Windows got added a feature called dark mode. The OS can even be told to switch to the alternate mode at specific times so the user does not need to do this manually. 
+More recently operating systems like iOS, Android, macOS, Windows got added a feature called dark mode. The OS can even be told to switch to the alternate mode at specific times so the user does not need to do this manually.
 
 Wouldn’t it be nice to have your website react to it as well? That might sound like a job for Javascript, doesn’t it? But CSS has you (almost) covered here. There are media selectors that get this information from the underlying OS allowing you to override the “light” theme with an additional dark version.
 
