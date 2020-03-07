@@ -12,9 +12,11 @@ fields:
   name: date
   label: Date
   default: now
-- type: list
-  name: categories
+- name: categories
+  type: tag_list
+  default: []
   label: Categories
+  hidden: true
 - name: tags
   type: tag_list
   default: []
