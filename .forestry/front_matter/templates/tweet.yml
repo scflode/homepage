@@ -21,3 +21,4 @@ fields:
   label: Tags
 pages:
 - content/posts/test-tweet.md
+- content/posts/tweets/tweet.md
