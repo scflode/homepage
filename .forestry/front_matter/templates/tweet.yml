@@ -1,7 +1,6 @@
 ---
 label: Tweet
 hide_body: false
-display_field: title
 fields:
 - type: text
   name: title
@@ -21,6 +20,3 @@ fields:
   type: tag_list
   default: []
   label: Tags
-pages:
-- content/posts/tweets/tweet-1.md
-- content/posts/tweets/tweet.md
