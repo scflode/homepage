@@ -2,11 +2,17 @@
 label: Tweet
 hide_body: false
 fields:
-- type: text
-  name: title
+- name: title
+  type: datetime
   label: Title
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
   hidden: true
-  default: Tweet
+  default: now
 - type: datetime
   name: date
   label: Date
