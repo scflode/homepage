@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Dark mode - variables</title>
+    <style>
+      :root {
+        --bg-color: #eee;
+        --fg-color: #333;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: #222;
+          --fg-color: #ddd;
+        }
+      }
+
+      html {
+        background-color: var(--bg-color);
+        color: var(--fg-color);
+      }
+    </style>
+  </head>
+  <body>
+    <p>Page content</p>
+  </body>
+</html>
