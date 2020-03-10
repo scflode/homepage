@@ -4,32 +4,43 @@ languageCode = "en-us"
 summaryLength = 40
 theme = "flow-shizzle"
 title = "Flo Schüssel - Software consultant & developer"
+
 [Permalinks]
-posts = "/:year/:month/:filename/"
+  posts = "/:year/:month/:filename/"
+
 [markup.highlight]
-codeFences = true
-guessSyntax = true
-hl_Lines = ""
-lineNoStart = 1
-lineNos = true
-lineNumbersInTable = true
-noClasses = true
-style = "swapoff"
-tabWidth = 4
+  codeFences = true
+  guessSyntax = true
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNos = true
+  lineNumbersInTable = true
+  noClasses = true
+  style = "swapoff"
+  tabWidth = 4
+
 [[menu.footer]]
-name = "Tags"
-url = "/tags"
-weight = 2
+  name = "Tags"
+  url = "/tags"
+  weight = 2
+
 [[menu.footer]]
-name = "Categories"
-url = "/categories"
-weight = 1
+  name = "Categories"
+  url = "/categories"
+  weight = 1
+
 [params]
-avatar = "/images/me/avatar.png"
+  avatar = "/images/me/avatar.png"
+
 [params.social]
-Bitbucket = "scflode"
-Email = "mail@florian-schuessel.de"
-GitHub = "scflode"
-Gitlab = "scflode"
-Twitter = "scflode"
-Xing = "Florian_Schuessel"
+  Bitbucket = "scflode"
+  Email = "mail@florian-schuessel.de"
+  GitHub = "scflode"
+  Gitlab = "scflode"
+  Twitter = "scflode"
+  Xing = "Florian_Schuessel"
+
+[sitemap]
+  changefreq = "daily"
+  filename = "sitemap.xml"
+  priority = 0.5
