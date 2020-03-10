@@ -31,11 +31,14 @@ Tasks here are everything related to the technical domain:
     * File service for different kinds of files (media, documents)
     * Authentication system
     * Small REST API
-    * Websockets (Channels, LiveView)
-  * Javascript for the frontend
-    * DropzoneJS
-    * Quill
-    * blueimp Gallery
+  * Javascript, HTML and CSS for the frontend
+    * Libraries used for Javascript
+      * DropzoneJS
+      * Quill
+      * blueimp Gallery
+    * Tailwind CSS
+    * Phoenix HTML (SSR)
+    * Websockets (Channels, LiveView) via Phoenix
 
 ### Startup consulting (2019-)
 
