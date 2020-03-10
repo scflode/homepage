@@ -10,12 +10,51 @@ Some projects / products I worked on:
 
 ## Freelance (2004 - now)
 
-While freelancing I worked on a lot of different projects. 
+While freelancing I worked on a lot of different projects.
 
-Some are:
+### Documentation platform (2019-)
 
-* Booking platform for a German automobile company
-* Flash based community platform for a German beverage manufacturer
+As lead tri-stack developer (DevOps, Backend, Frontend) I currently implement a documentation platform for a big corporation.
+
+Tasks here are everything related to the technical domain:
+
+* Setup and maintain the servers
+  * Setup dokku with different stages and apps
+    * Added a custom buildpack for ffmpeg
+  * Setup backup system
+  * Setup deployment workflow
+  * Setup and maintain CI and code repository
+* Plan technical tasks
+* Implement the system in large parts
+  * Elixir (Phoenix) for the backend
+    * Linked data with a lot of media files
+    * File service for different kinds of files (media, documents)
+    * Authentication system
+    * Small REST API
+    * Websockets (Channels, LiveView)
+  * Javascript for the frontend
+    * DropzoneJS
+    * Quill
+    * blueimp Gallery
+
+### Startup consulting (2019-)
+
+Currently I am consulting a startup company.
+
+* Do knowledge sharing about a special branch based software
+* Do knowledge sharing about different other parts of software in use
+* Support the development and DevOps team by creating technical tasks
+* Evaluate ways to get more information out of different systems in use
+* Manage and participate in projects
+* Help improve things by gathering and processing feedback
+* Support improving the overall workflow
+
+### Miscellaneous
+
+Some more noteworthy others are:
+
+* Booking platform for a German automobile company (2010-2012)
+* Flash based community platform for a German beverage manufacturer (2009)
 
 ## ottonova (2016 - 2018)
 
